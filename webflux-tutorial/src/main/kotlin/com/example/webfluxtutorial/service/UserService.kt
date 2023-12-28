@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @Service
-class UserService( private val userRepository: UserRepository) {
+class UserService(private val userRepository: UserRepository) {
     fun getUsers(): Flux<User> {
         return userRepository.findAll()
     }
