@@ -10,6 +10,9 @@ import org.springframework.web.reactive.function.server.RouterFunctions
 class RouterConfig {
     @Bean
     fun routes(userHandler: UserHandler): RouterFunction<*> {
-        return RouterFunctions.route().GET("/handler/users") { userHandler.getUsers(it)}.build()
+        return RouterFunctions.route()
+            .GET("/handler/users") { userHandler.getUsers(it)}
+            .POST("/handler/user") { userHandler.createUser(it)}
+            .build()
     }
 }
