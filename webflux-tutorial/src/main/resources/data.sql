@@ -4,3 +4,9 @@ CREATE TABLE IF NOT EXISTS users (
     name VARCHAR(255) NOT NULL
     );
 
+CREATE TABLE IF NOT EXISTS posts (
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    contents TEXT,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+)
