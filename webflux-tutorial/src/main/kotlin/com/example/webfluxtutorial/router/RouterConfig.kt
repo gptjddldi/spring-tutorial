@@ -13,7 +13,7 @@ class RouterConfig {
     fun routes(userHandler: UserHandler, postHandler: PostHandler): RouterFunction<*> {
         return RouterFunctions.route()
             .GET("/handler/users") { userHandler.getUsers(it)}
-            .POST("/handler/user") { userHandler.createUser(it)}
+            .POST("/handler/auth/register") { userHandler.createUser(it)}
             .GET("/handler/posts") { postHandler.getPosts(it)}
             .POST("/handler/post") { postHandler.createPost(it)}
             .build()

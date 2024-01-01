@@ -1,5 +1,6 @@
 package com.example.webfluxtutorial.handler
 
+import com.example.webfluxtutorial.dto.UserDto
 import com.example.webfluxtutorial.entity.User
 import com.example.webfluxtutorial.service.UserService
 import org.springframework.http.HttpStatus
@@ -20,7 +21,7 @@ class UserHandler(private val userService: UserService) {
     }
 
     fun createUser(request: ServerRequest): Mono<ServerResponse> {
-        val user = request.bodyToMono(User::class.java)
+        val user = request.bodyToMono(UserDto::class.java)
         return user
             .flatMap {
                 ServerResponse

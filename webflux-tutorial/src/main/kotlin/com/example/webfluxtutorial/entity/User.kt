@@ -8,5 +8,6 @@ import org.springframework.data.relational.core.mapping.Table
 data class User(
     @Id
     @Column("id") val id: Long?,
-    @Column("name") val name: String
+    @Column("name") val name: String,
+    @Column("password") val password: String
 )
