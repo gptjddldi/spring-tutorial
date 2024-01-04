@@ -1,4 +1,4 @@
-package com.example.webfluxtutorial.handler
+package com.example.webfluxtutorial.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
