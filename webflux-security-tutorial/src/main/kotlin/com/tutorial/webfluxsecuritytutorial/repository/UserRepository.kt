@@ -1,7 +1,6 @@
 package com.tutorial.webfluxsecuritytutorial.repository
 
-import com.tutorial.webfluxsecuritytutorial.model.User
-import org.springframework.data.r2dbc.repository.Query
+import com.tutorial.webfluxsecuritytutorial.user.User
 import org.springframework.data.r2dbc.repository.R2dbcRepository
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono

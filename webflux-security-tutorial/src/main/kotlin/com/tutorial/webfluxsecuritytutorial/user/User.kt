@@ -1,4 +1,4 @@
-package com.tutorial.webfluxsecuritytutorial.model
+package com.tutorial.webfluxsecuritytutorial.user
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Column

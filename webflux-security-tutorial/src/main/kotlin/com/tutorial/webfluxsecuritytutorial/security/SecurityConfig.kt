@@ -35,6 +35,8 @@ class SecurityConfig {
                 it
                     .pathMatchers("/login")
                     .permitAll()
+                    .pathMatchers("/register")
+                    .permitAll()
                     .anyExchange()
                     .authenticated()
             }

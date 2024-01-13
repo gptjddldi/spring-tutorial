@@ -3,8 +3,7 @@ package com.tutorial.webfluxsecuritytutorial.security
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
-import java.util.stream.Collectors
-import com.tutorial.webfluxsecuritytutorial.model.User as MyUser
+import com.tutorial.webfluxsecuritytutorial.user.User as MyUser
 
 data class CustomUserDetails(private val user: MyUser) : UserDetails {
     override fun getAuthorities(): Collection<GrantedAuthority> {
