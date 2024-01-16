@@ -1,7 +1,6 @@
 package com.example.webfluxtutorial.entity
 
 import org.springframework.data.annotation.Id
-import org.springframework.data.annotation.Transient
 import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 
@@ -11,5 +10,4 @@ data class Post(
     @Column("id") val id: Long?,
     @Column("contents") val contents: String,
     @Column("user_id") val userId: Long,
-    @Transient var user: User?,
 )
