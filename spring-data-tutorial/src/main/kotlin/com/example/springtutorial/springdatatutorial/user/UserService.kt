@@ -8,6 +8,10 @@ class UserService(private val userRepository: UserRepository){
         return userRepository.findAll()
     }
 
+    fun getUserById(id: Int): User {
+        return userRepository.findById(id).get()
+    }
+
     fun addUser(user: User): User {
         return userRepository.save(user)
     }
