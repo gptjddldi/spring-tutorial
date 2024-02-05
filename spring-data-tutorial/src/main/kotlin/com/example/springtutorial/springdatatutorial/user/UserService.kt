@@ -15,6 +15,9 @@ class UserService(
     fun getUserById(id: Int): User {
         return userRepository.findById(id).get()
     }
+    fun getUserByEmail(email: String): User {
+        return userRepository.findUserByEmail(email)
+    }
 
     fun addUser(u: UserSignupRequestDto): User {
         val user = u.toEntity(passwordEncoder)
