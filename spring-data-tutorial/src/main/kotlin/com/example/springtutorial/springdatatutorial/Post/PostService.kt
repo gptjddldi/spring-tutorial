@@ -1,6 +1,7 @@
 package com.example.springtutorial.springdatatutorial.Post
 
 import com.example.springtutorial.springdatatutorial.user.UserService
+import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.stereotype.Service
 
 @Service
@@ -10,7 +11,8 @@ class PostService(private val postRepository: PostRepository, private val userSe
     }
 
     fun createPost(post: PostDto): Post {
-        val author = userService.getUserById(post.authorId)
+        val email = SecurityContextHolder.getContext().authentication.name
+        val author = userService.getUserByEmail(email)
         val p = Post(
             id = post.id,
             title = post.title,
@@ -20,8 +22,4 @@ class PostService(private val postRepository: PostRepository, private val userSe
 
         return postRepository.save(p)
     }
-//
-//    fun getPostsByAuthor(authorId: Int): List<Post> {
-//        return postRepository.findAllByAuthorId(authorId)
-//    }
 }

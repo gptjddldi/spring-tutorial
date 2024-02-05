@@ -9,7 +9,6 @@ data class UserSignupRequestDto(
 ) {
     fun toEntity(passwordEncoder: PasswordEncoder): User {
         return User(
-            id = 1,
             name = name,
             email = email,
             password = passwordEncoder.encode(password)

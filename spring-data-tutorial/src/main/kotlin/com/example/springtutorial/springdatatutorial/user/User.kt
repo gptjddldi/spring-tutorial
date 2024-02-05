@@ -11,7 +11,7 @@ import jakarta.persistence.OneToMany
 data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Int? = null,
     val name: String,
     val email: String,
     val password: String,
