@@ -11,10 +11,13 @@ import jakarta.persistence.ManyToOne
 data class Post(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    override var id: Long = 0L,
+
     val title: String,
     val content: String,
+
     @ManyToOne
     @JoinColumn(name = "author_id")
     val author: User
-)
+
+): AuditModel(), EntityWithId

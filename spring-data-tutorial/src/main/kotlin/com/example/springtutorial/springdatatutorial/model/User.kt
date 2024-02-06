@@ -10,10 +10,12 @@ import jakarta.persistence.OneToMany
 data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int? = null,
+    override val id: Long = 0L,
+
     val name: String,
     val email: String,
     val password: String,
+
     @OneToMany(mappedBy = "author")
     val posts: List<Post> = emptyList()
-)
+): AuditModel(), EntityWithId
