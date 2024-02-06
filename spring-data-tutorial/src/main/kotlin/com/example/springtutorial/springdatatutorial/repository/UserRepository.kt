@@ -1,5 +1,6 @@
-package com.example.springtutorial.springdatatutorial.user
+package com.example.springtutorial.springdatatutorial.repository
 
+import com.example.springtutorial.springdatatutorial.model.User
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

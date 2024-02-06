@@ -1,5 +1,8 @@
-package com.example.springtutorial.springdatatutorial.post
+package com.example.springtutorial.springdatatutorial.controller
 
+import com.example.springtutorial.springdatatutorial.model.Post
+import com.example.springtutorial.springdatatutorial.dto.PostDto
+import com.example.springtutorial.springdatatutorial.service.PostService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

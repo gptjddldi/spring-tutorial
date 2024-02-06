@@ -1,5 +1,6 @@
-package com.example.springtutorial.springdatatutorial.user
+package com.example.springtutorial.springdatatutorial.dto
 
+import com.example.springtutorial.springdatatutorial.model.User
 import org.springframework.security.crypto.password.PasswordEncoder
 
 data class UserSignupRequestDto(

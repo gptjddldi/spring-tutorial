@@ -1,6 +1,6 @@
 package com.example.springtutorial.springdatatutorial.security
 
-import com.example.springtutorial.springdatatutorial.user.UserRepository
+import com.example.springtutorial.springdatatutorial.repository.UserRepository
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.Authentication

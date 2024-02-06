@@ -1,5 +1,6 @@
 package com.example.springtutorial.springdatatutorial.security
 
+import com.example.springtutorial.springdatatutorial.dto.security.LoginRequestDto
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import jakarta.servlet.http.HttpServletRequest
@@ -19,7 +20,7 @@ class SessionAuthenticationFilter(
     ): Authentication {
         val mapper = jacksonObjectMapper()
 
-        val creds = mapper.readValue<UserLoginRequestDto>(req.inputStream)
+        val creds = mapper.readValue<LoginRequestDto>(req.inputStream)
 
         return sessionAuthenticationManager.authenticate(
             UsernamePasswordAuthenticationToken(

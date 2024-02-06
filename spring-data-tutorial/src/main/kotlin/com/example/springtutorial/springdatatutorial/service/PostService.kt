@@ -1,6 +1,8 @@
-package com.example.springtutorial.springdatatutorial.post
+package com.example.springtutorial.springdatatutorial.service
 
-import com.example.springtutorial.springdatatutorial.user.UserService
+import com.example.springtutorial.springdatatutorial.dto.PostDto
+import com.example.springtutorial.springdatatutorial.model.Post
+import com.example.springtutorial.springdatatutorial.repository.PostRepository
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.stereotype.Service
 

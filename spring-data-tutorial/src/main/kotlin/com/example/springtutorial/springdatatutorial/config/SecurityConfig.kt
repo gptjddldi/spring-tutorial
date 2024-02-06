@@ -1,5 +1,7 @@
-package com.example.springtutorial.springdatatutorial.security
+package com.example.springtutorial.springdatatutorial.config
 
+import com.example.springtutorial.springdatatutorial.security.SessionAuthenticationFilter
+import com.example.springtutorial.springdatatutorial.security.SessionAuthenticationManager
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity

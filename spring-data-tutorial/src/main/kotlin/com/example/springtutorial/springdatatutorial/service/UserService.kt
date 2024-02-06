@@ -1,5 +1,8 @@
-package com.example.springtutorial.springdatatutorial.user
+package com.example.springtutorial.springdatatutorial.service
 
+import com.example.springtutorial.springdatatutorial.model.User
+import com.example.springtutorial.springdatatutorial.repository.UserRepository
+import com.example.springtutorial.springdatatutorial.dto.UserSignupRequestDto
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 

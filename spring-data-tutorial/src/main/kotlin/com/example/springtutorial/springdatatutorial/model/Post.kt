@@ -1,6 +1,5 @@
-package com.example.springtutorial.springdatatutorial.post
+package com.example.springtutorial.springdatatutorial.model
 
-import com.example.springtutorial.springdatatutorial.user.User
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType

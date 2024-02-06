@@ -1,5 +1,6 @@
-package com.example.springtutorial.springdatatutorial.post
+package com.example.springtutorial.springdatatutorial.repository
 
+import com.example.springtutorial.springdatatutorial.model.Post
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
