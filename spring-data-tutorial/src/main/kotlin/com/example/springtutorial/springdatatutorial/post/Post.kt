@@ -1,4 +1,4 @@
-package com.example.springtutorial.springdatatutorial.Post
+package com.example.springtutorial.springdatatutorial.post
 
 import com.example.springtutorial.springdatatutorial.user.User
 import jakarta.persistence.Entity

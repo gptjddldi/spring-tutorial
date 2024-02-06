@@ -1,4 +1,4 @@
-package com.example.springtutorial.springdatatutorial.Post
+package com.example.springtutorial.springdatatutorial.post
 
 data class PostDto(
     val id: Int,
