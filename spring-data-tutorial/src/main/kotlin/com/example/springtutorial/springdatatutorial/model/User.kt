@@ -17,5 +17,8 @@ data class User(
     val password: String,
 
     @OneToMany(mappedBy = "author")
-    val posts: List<Post> = emptyList()
+    val posts: List<Post> = emptyList(),
+
+    @OneToMany(mappedBy = "author")
+    val comments: List<Comment> = emptyList()
 ): AuditModel(), EntityWithId

@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.JoinColumn
 import jakarta.persistence.ManyToOne
+import jakarta.persistence.OneToMany
 
 @Entity
 data class Post(
@@ -18,6 +19,8 @@ data class Post(
 
     @ManyToOne
     @JoinColumn(name = "author_id")
-    val author: User
+    val author: User,
 
+    @OneToMany(mappedBy = "post")
+    val comments: List<Comment> = emptyList()
 ): AuditModel(), EntityWithId

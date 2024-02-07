@@ -20,4 +20,13 @@ class PostService(private val postRepository: PostRepository){
         )
         return postRepository.save(post)
     }
+
+    fun getPost(id: Long): Post {
+        return postRepository.findById(id).get()
+    }
+
+    fun getPostComments(id: Long): List<String?> {
+        val post = postRepository.findById(id).get()
+        return post.comments.map { it.content }
+    }
 }
